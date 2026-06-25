@@ -1,0 +1,28 @@
+<section class="section projects">
+  <div class="section-head">
+    <h2 class="section-title">Featured projects</h2>
+  </div>
+
+  <div class="project-grid">
+    {% for p in site.data.projects %}
+    <a class="project-card" href="{{ p.link | default: '#' }}">
+      <div class="project-media" style="--media-bg: {{ p.bg | default: '#22301a' }};">
+        {% if p.video %}
+          <video autoplay muted loop playsinline preload="metadata"{% if p.poster %} poster="{{ p.poster | relative_url }}"{% endif %}>
+            <source src="{{ p.video | relative_url }}" type="video/mp4">
+          </video>
+        {% elsif p.image %}
+          <img src="{{ p.image | relative_url }}" alt="{{ p.title }}">
+        {% else %}
+          <span class="play"><i class="ti ti-player-play"></i></span>
+          <span class="media-tag">DEMO</span>
+        {% endif %}
+      </div>
+      <div class="project-body">
+        <p class="project-title">{{ p.title }}</p>
+        <p class="project-desc">{{ p.blurb }} {% if p.venue %}<span class="project-venue">{{ p.venue }}</span>{% endif %}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

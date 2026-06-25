@@ -1,0 +1,27 @@
+# Featured projects shown on the home page.
+# Media options for each card (first one present wins):
+#   video: /assets/video/demo.mp4   -> autoplaying, muted, looping HTML5 video (recommended)
+#   image: /assets/img/demo.jpg     -> a static thumbnail
+#   (neither)                       -> a placeholder play button on the `bg` color
+# Optional: poster (a still shown before the video loads), link (project/paper page).
+#
+# Recommended for videos: short (5-15s), muted, looping H.264 .mp4, kept small
+# (ideally < a few MB, ~720p). Muted autoplay loops play on all modern browsers
+# and look far sharper/smaller than a GIF. Drop files in assets/video/.
+- title: Bayesian social deduction
+  blurb: LLM-based agents that infer hidden intentions in social games.
+  venue: ACL 2026
+  bg: "#22301a"
+  video:  /assets/video/grail.mp4
+  poster: #
+  image: #
+  link: https://camp-lab-purdue.github.io/bayesian-social-deduction/
+
+- title: Concept-driven exploration
+  blurb: Task-relevant curiosity for reinforcement learning agents.
+  venue: IROS 2024
+  bg: "#3a2417"
+  video: /assets/video/cde.mp4
+  poster: #
+  image: #
+  link: https://sites.google.com/view/concept-learn/home

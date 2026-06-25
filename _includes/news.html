@@ -1,0 +1,14 @@
+<section class="section news">
+  <div class="section-head">
+    <h2 class="section-title">Recent news</h2>
+  </div>
+  <div class="news-list">
+    {% assign items = site.news | sort: 'date' | reverse %}
+    {% for item in items limit: 10 %}
+    <div class="news-item">
+      <span class="news-date">{{ item.date | date: "%b %Y" }}</span>
+      <p class="news-text">{{ item.content | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

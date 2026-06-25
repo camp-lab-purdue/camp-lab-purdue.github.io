@@ -1,0 +1,33 @@
+<section class="hero">
+  <div class="hero-text">
+    <p class="kicker">AI · MACHINE LEARNING · ROBOTICS</p>
+    <h1>{{ site.tagline }}</h1>
+    <p class="lead">A research group at {{ site.institution }} building collaborative AI and robots that continue learning long after we stop teaching them.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/people/' | relative_url }}">Meet the team</a>
+      <a class="btn btn-ghost" href="{{ '/publications/' | relative_url }}">Read our work</a>
+    </div>
+  </div>
+
+  <div class="hero-hills">
+    <svg id="hb" viewBox="0 7 632 137" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+      <g id="mtns">
+        <path d="M-10 64 L58 26 L118 60 L196 22 L286 58 L368 26 L460 56 L548 24 L645 60 L645 90 L-10 90 Z" fill="#C3CFB3"/>
+        <path d="M58 26 L70 42 L46 42 Z" fill="#EEF3E8"/><path d="M196 22 L209 40 L183 40 Z" fill="#EEF3E8"/><path d="M368 26 L380 42 L356 42 Z" fill="#EEF3E8"/><path d="M548 24 L560 41 L536 41 Z" fill="#EEF3E8"/>
+      </g>
+      <g id="birds" fill="none" stroke-linecap="round">
+        <path d="M430 15 Q436 9 442 15" stroke="#9DB877" stroke-width="1.5"/>
+        <path d="M452 12 Q458 6 464 12" stroke="#B6CF8C" stroke-width="1.5"/>
+        <path d="M500 16 Q505 11 510 16" stroke="#B6CF8C" stroke-width="1.4"/>
+      </g>
+      <path d="M0 156 L0 58 Q90 38 180 52 Q300 74 420 46 Q520 26 632 50 L632 156 Z" fill="#D7E6BC"/>
+      <g id="trees"></g>
+      <path d="M0 156 L0 84 Q120 58 240 80 Q380 106 500 74 Q570 58 632 80 L632 156 Z" fill="#C2D89B"/>
+      <path id="frontH" d="" fill="#A4C06E"/>
+      <path id="frontLine" d="" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.16"/>
+      <g id="tent"></g>
+      <g id="robot"></g>
+    </svg>
+  </div>
+</section>
+<script src="{{ '/assets/js/hero.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

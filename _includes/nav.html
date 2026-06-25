@@ -1,0 +1,13 @@
+<header class="site-nav">
+  <a class="brand" href="{{ '/' | relative_url }}">
+    {% include logo.svg %}
+    <span class="brand-name">{{ site.short_name }}</span>
+  </a>
+  <nav class="menu" aria-label="Primary">
+    {% assign u = page.url %}
+    <a href="{{ '/' | relative_url }}" class="{% if u == '/' %}active{% endif %}">Home</a>
+    <a href="{{ '/people/' | relative_url }}" class="{% if u contains '/people' %}active{% endif %}">People</a>
+    <a href="{{ '/publications/' | relative_url }}" class="{% if u contains '/publications' %}active{% endif %}">Publications</a>
+    <a href="{{ '/prospective/' | relative_url }}" class="{% if u contains '/prospective' %}active{% endif %}">Prospective students</a>
+  </nav>
+</header>

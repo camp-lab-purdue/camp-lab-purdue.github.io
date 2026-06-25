@@ -1,0 +1,16 @@
+{% assign grp = include.people %}
+{% if grp and grp != empty %}
+<div class="people-section">
+  <span class="eyebrow">{{ include.heading }}</span>
+  <div class="people-grid">
+    {% for person in grp %}
+    <a class="person-card" href="{{ person.url | relative_url }}">
+      {% assign parts = person.name | split: ' ' %}
+      <span class="avatar">{% if person.photo %}<img src="{{ person.photo | relative_url }}" alt="{{ person.name }}">{% else %}{{ parts[0] | slice: 0 }}{{ parts.last | slice: 0 }}{% endif %}</span>
+      <p class="person-name">{{ person.name }}</p>
+      <p class="person-role">Joined {{ person.started }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

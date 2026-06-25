@@ -1,0 +1,467 @@
+% ----------------------------------------------------------------------
+% Link buttons on the Publications page come from these OPTIONAL fields on
+% any entry (add the ones you have; omit the rest):
+%   pdf    = {https://...}             -> "PDF" button  (or a local path like {/assets/pdf/foo.pdf})
+%   code   = {https://github.com/...}  -> "Code" button
+%   arxiv  = {2506.01234}              -> "arXiv" button (just the id; the link is built for you)
+%   website= {https://...}             -> "Website" button (project page)
+%   html   = {https://...}             -> "Link" button (DOI, publisher, etc.)
+% For a local PDF, drop the file in assets/pdf/ and set pdf={/assets/pdf/name.pdf}.
+%
+% Research-area tags (also OPTIONAL) become colored labels and feed the topic
+% filter at the top of the Publications page. Comma-separated, one paper can
+% have several:   tags={Reinforcement Learning, Robotics}
+% Known tag colors: Reinforcement Learning, Robotics, Language Models,
+% Interpretability, Theory of Mind, Multi-Agent, Human-Robot Interaction
+% (any other tag still works; it just gets a neutral gray label).
+%
+% Several entries below show examples; replace the placeholder pdf/arxiv/code
+% values with the real ones.
+% ----------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%% Conference
+
+@article{mao2026concept,
+  title={CDE: Concept-Driven Exploration for Reinforcement Learning},
+  author={Mao, Le and Liu, Andrew and Zabounidis, Renos and Niu, Yanan and Kingston, Zachary and Campbell, Joseph},
+  journal={IROS},
+  year={2026},
+  arxiv={2510.08851},
+  website={https://sites.google.com/view/concept-learn/home},
+  tags={Reinforcement Learning, Robotics},
+  keywords={conference},
+}
+
+@article{rahimirad2026bayesian,
+  title={Bayesian Social Deduction with Graph-Informed Language Models},
+  author={Rahimirad, Shahab and Gergerli, Guven and Romero, Lucy and Qian, Angela and Olson, Matthew Lyle and Stepputtis, Simon and Campbell, Joseph},
+  journal={ACL},
+  year={2026},
+  code={https://github.com/shahabrrad/Bayesian-Avalon},
+  arxiv={2506.17788},
+  website={https://camp-lab-purdue.github.io/bayesian-social-deduction/},
+  tags={Theory of Mind, Language Models},
+  keywords={conference},
+}
+
+@article{olson2026lie,
+  title={LieCraft: A Multi-Agent Framework for Evaluating Deceptive Capabilities in Language Models},
+  author={Olson, Matthew Lyle and Ratzlaff, Neale and Hinck, Musashi and Nguyen, Tri and Lal, Vasudev and Campbell, Joseph and Stepputtis, Simon and Tseng, Shao Yen},
+  journal={AAAI},
+  year={2026},
+  arxiv={2603.06874},
+  tags={Language Models},
+  keywords={conference},
+}
+
+@article{xi2025model,
+  title={Model-Agnostic Policy Explanations with Large Language Models},
+  author={Xi-Jia, Zhang and Guo, Yue and Chen, Shufei and Stepputtis, Simon and Gombolay, Matthew and Sycara, Katia and Campbell, Joseph},
+  journal={COLM},
+  year={2025},
+  arxiv={2504.05625},
+  tags={Interpretability, Language Models},
+  keywords={conference},
+}
+
+@article{deng2025sparse,
+  title={Sparse Mixture-of-Experts for Non-Uniform Noise Reduction in MRI Images},
+  author={Deng, Zeyun and Campbell, Joseph},
+  journal={WACV Workshop on Image Quality},
+  arxiv={2501.14198},
+  tags={Computer Vision},
+  year={2025},
+  keywords={workshop},
+}
+
+@article{lin2024navigating,
+  title={Navigating Noisy Feedback: Enhancing Reinforcement Learning with Error-Prone Language Models},
+  author={Lin, Muhan and Shi, Shuyang and Guo, Yue and Chalaki, Behdad and Tadiparthi, Vaishnav and Pari, Ehsan Moradi and Stepputtis, Simon and Campbell, Joseph and Sycara, Katia},
+  journal={EMNLP Findings},
+  year={2024},
+  arxiv={2410.17389},
+  tags={Reinforcement Learning, Language Models},
+  keywords={conference}
+}
+
+
+@article{li2024shapegrasp,
+  title={ShapeGrasp: Zero-Shot Task-Oriented Grasping with Large Language Models through Geometric Decomposition},
+  author={Li, Samuel and Bhagat, Sarthak and Campbell, Joseph and Xie, Yaqi and Kim, Woojun and Sycara, Katia and Stepputtis, Simon},
+  journal={IROS},
+  year={2024},
+  code={https://github.com/samwli/ShapeGrasp/tree/main},
+  website={https://shapegrasp.github.io/},
+  arxiv={2403.18062},
+  tags={Robotics, Language Models},
+  keywords={conference},
+}
+
+@article{guo2024adaptive,
+  title={Adaptive Action Advising with Different Rewards},
+  author={Guo, Yue and Zhang, Xijia and Stepputtis, Simon and Campbell, Joseph and Sycara, Katia},
+  journal={CoLLAs},
+  year={2024},
+  pdf={/assets/pdf/24guo_art.pdf},
+  tags={Reinforcement Learning},
+  keywords={conference},
+  note={oral},
+}
+
+@article{zhang2024hiker,
+  title={HiKER-SGG: Hierarchical Knowledge Enhanced Robust Scene Graph Generation},
+  author={Zhang, Ce and Stepputtis, Simon and Campbell, Joseph and Sycara, Katia and Xie, Yaqi},
+  journal={CVPR},
+  year={2024},
+  arxiv={2403.12033},
+  code={https://github.com/zhangce01/HiKER-SGG},
+  tags={Computer Vision},
+  keywords={conference},
+}
+
+@article{stepputtis2023long,
+  title={Long-Horizon Dialogue Understanding for Role Identification in the Game of Avalon with Large Language Models},
+  author={Stepputtis, Simon and Campbell, Joseph and Xie, Yaqi and Qi, Zhengyang and Zhang, Wenxin Sharon and Wang, Ruiyi and Rangreji, Sanketh and Lewis, Michael and Sycara, Katia},
+  journal={EMNLP Findings},
+  year={2023},
+  arxiv={2311.05720},
+  website={https://sstepput.github.io/Avalon-NLU/},
+  code={https://github.com/sstepput/Avalon-NLU},
+  tags={Theory of Mind, Multi-Agent, Language Models},
+  keywords={conference},
+}
+
+@article{li2023theory,
+  title={Theory of Mind for Multi-Agent Collaboration via Large Language Models},
+  author={Li, Huao and Chong, Yu Quan and Stepputtis, Simon and Campbell, Joseph and Hughes, Dana and Lewis, Michael and Sycara, Katia},
+  journal={EMNLP},
+  year={2023},
+  arxiv={2310.10701},
+  code={https://github.com/romanlee6/multi_LLM_comm},
+  tags={Theory of Mind, Multi-Agent, Language Models},
+  keywords={conference},
+}
+
+@article{hughes2023framework,
+  title={A Framework for Intervention Based Team Support in Time Critical Tasks},
+  author={Hughes, Dana and Li, Huao and Chis, Max and Oguntola, Ini and Stepputtis, Simon and Zheng, Keyang and Campbell, Joseph and Sycara, Katia and Lewis, Michael},
+  journal={SMC},
+  pages={4805--4812},
+  year={2023},
+  tags={Human-Robot Interaction},
+  organization={IEEE},
+  keywords={conference},
+}
+
+@article{liu2023enhancing,
+  title={Enhancing State Estimation in Robots: A Data-Driven Approach with Differentiable Ensemble Kalman Filters},
+  author={Liu, Xiao and Clark, Geoffrey and Campbell, Joseph and Zhou, Yifan and Ben Amor, Heni},
+  journal={IROS},
+  pages={1947--1954},
+  year={2023},
+  arxiv={2308.09870},
+  code={https://github.com/ir-lab/DEnKF},
+  tags={Robotics},
+  organization={IEEE},
+  keywords={conference},
+}
+
+@article{campbell2023introspective,
+  title={Introspective Action Advising for Interpretable Transfer Learning},
+  author={Campbell, Joseph and Guo, Yue and Xie, Fiona and Stepputtis, Simon and Sycara, Katia},
+  journal={CoLLAs},
+  pages={1072--1090},
+  year={2023},
+  arxiv={2306.12314},
+  tags={Reinforcement Learning},
+  organization={PMLR},
+  keywords={conference},
+}
+
+@article{bhagat2023sample,
+  title={Sample-Efficient Learning of Novel Visual Concepts},
+  author={Bhagat*, Sarthak and Stepputtis*, Simon and Campbell, Joseph and Sycara, Katia},
+  journal={CoLLAs},
+  pages={637--657},
+  year={2023},
+  arxiv={2306.09482},
+  tags={Computer Vision},
+  organization={PMLR},
+  keywords={conference},
+  note={oral,talk},
+}
+
+@article{drolet2023learning,
+  title={Learning and Blending Robot Hugging Behaviors in Time and Space},
+  author={Drolet, Michael and Campbell, Joseph and Ben Amor, Heni},
+  journal={ICRA},
+  pages={12071--12077},
+  year={2023},
+  tags={Human-Robot Interaction, Robotics},
+  organization={IEEE},
+  keywords={conference},
+}
+
+@article{guo2023explainable,
+  title={Explainable Action Advising for Multi-Agent Reinforcement Learning},
+  author={Guo, Yue and Campbell, Joseph and Stepputtis, Simon and Li, Ruiyu and Hughes, Dana and Fang, Fei and Sycara, Katia},
+  journal={ICRA},
+  pages={5515--5521},
+  year={2023},
+  arxiv={2211.07882},
+  code={https://github.com/sophieyueguo/explainable_action_advising},
+  tags={Reinforcement Learning, Multi-Agent},
+  organization={IEEE},
+  keywords={conference},
+}
+
+@article{lu2024characterizing,
+  title={Characterizing Out-of-Distribution Error via Optimal Transport},
+  author={Lu, Yuzhe and Qin, Yilong and Zhai, Runtian and Shen, Andrew and Chen, Ketong and Wang, Zhenlin and Kolouri, Soheil and Stepputtis, Simon and Campbell, Joseph and Sycara, Katia},
+  journal={NeurIPS},
+  volume={36},
+  tags={Machine Learning},
+  year={2023},
+  keywords={conference},
+}
+
+@article{zabounidis2022concept,
+  title={Concept Learning for Interpretable Multi-Agent Reinforcement Learning},
+  author={Zabounidis*, Renos and Campbell*, Joseph and Stepputtis, Simon and Hughes, Dana and Sycara, Katia P},
+  journal={CoRL},
+  pages={1828--1837},
+  year={2022},
+  organization={PMLR},
+  keywords={conference},
+}
+
+@article{clark2020learning,
+  title={Learning Predictive Models for Ergonomic Control of Prosthetic Devices},
+  author={Clark, Geoffrey and Campbell, Joseph and Ben Amor, Heni},
+  journal={CoRL},
+  year={2020},
+  keywords={conference},
+}
+
+@article{clark2020predictive,
+  title={Predictive Modeling of Periodic Behavior for Human-Robot Symbiotic Walking},
+  author={Clark, Geoffrey and Campbell, Joseph and Sorkhabadi, Seyed Mostafa Rezayat and Zhang, Wenlong and Ben Amor, Heni},
+  journal={ICRA},
+  pages={7599--7605},
+  year={2020},
+  organization={IEEE},
+  keywords={conference},
+}
+
+@article{campbell2020learning,
+  title={Learning Whole-Body Human-Robot Haptic Interaction in Social Contexts},
+  author={Campbell, Joseph and Yamane, Katsu},
+  journal={ICRA},
+  pages={10177--10183},
+  year={2020},
+  organization={IEEE},
+  keywords={conference},
+  note={talk},
+}
+
+@article{stepputtis2020language,
+  title={Language-Conditioned Imitation Learning for Robot Manipulation Tasks},
+  author={Stepputtis, Simon and Campbell, Joseph and Phielipp, Mariano and Lee, Stefan and Baral, Chitta and Ben Amor, Heni},
+  journal={NeurIPS},
+  volume={33},
+  pages={13139--13150},
+  year={2020},
+  keywords={conference},
+  note={spotlight},
+}
+
+@article{campbell2019learning,
+  title={Learning Interactive Behaviors for Musculoskeletal Robots Using Bayesian Interaction Primitives},
+  author={Campbell, Joseph and Hitzmann, Arne and Stepputtis, Simon and Ikemoto, Shuhei and Hosoda, Koh and Ben Amor, Heni},
+  journal={IROS},
+  pages={5071--5078},
+  year={2019},
+  organization={IEEE},
+  keywords={conference},
+  note={talk},
+}
+
+@article{bagewadi2019multimodal,
+  title={Multimodal Dataset of Human-Robot Hugging Interaction},
+  author={Bagewadi, Kunal and Campbell, Joseph and Ben Amor, Heni},
+  journal={AAAI-HRI},
+  year={2019},
+  keywords={conference},
+}
+
+@article{campbell2019probabilistic,
+  title={Probabilistic Multimodal Modeling for Human-Robot Interaction Tasks},
+  author={Campbell, Joseph and Stepputtis, Simon and Ben Amor, Heni},
+  journal={RSS},
+  year={2019},
+  keywords={conference},
+  note={talk},
+}
+
+@article{campbell2017bayesian,
+  title={Bayesian Interaction Primitives: A SLAM Approach to Human-Robot Interaction},
+  author={Campbell, Joseph and Ben Amor, Heni},
+  journal={CoRL},
+  pages={379--387},
+  year={2017},
+  organization={PMLR},
+  keywords={conference},
+  note={talk},
+}
+
+@article{luck2017lab,
+  title={From the Lab to the Desert: Fast Prototyping and Learning of Robot Locomotion},
+  author={Luck*, Kevin Sebastian and Campbell*, Joseph and Jansen*, Michael Andrew and Aukes, Daniel M and Ben Amor, Heni},
+  journal={RSS},
+  year={2017},
+  keywords={conference},
+}
+
+@article{jansen2017bio,
+  title={Bio-Inspired Robot Design Considering Load-Bearing and Kinematic Ontogeny of Chelonioidea Sea Turtles},
+  author={Jansen, Andrew and Luck, Kevin Sebastian and Campbell, Joseph and Ben Amor, Heni and Aukes, Daniel M},
+  journal={Living Machines},
+  pages={216--229},
+  year={2017},
+  organization={Springer},
+  keywords={conference},
+}
+
+@article{gupta2016adaptive,
+  title={Adaptive Performance Prediction for Integrated GPUs},
+  author={Gupta, Ujjwal and Campbell, Joseph and Ogras, Umit Y and Ayoub, Raid and Kishinevsky, Michael and Paterna, Francesco and Gumussoy, Suat},
+  journal={ICCAD},
+  pages={1--8},
+  year={2016},
+  organization={IEEE},
+  keywords={conference},
+}
+
+@article{campbell2016traffic,
+  title={Traffic Light Status Detection Using Movement Patterns of Vehicles},
+  author={Campbell, Joseph and Ben Amor, Heni and Ang, Marcelo H and Fainekos, Georgios},
+  journal={ITSC},
+  pages={283--288},
+  year={2016},
+  organization={IEEE},
+  keywords={conference},
+  note={talk},
+}
+
+@article{campbell2016modeling,
+  title={Modeling Concurrency and Reconfiguration in Vehicular Systems: A $\pi$-Calculus Approach},
+  author={Campbell, Joseph and Tuncali, Cumhur Erkan and Liu, Peng and Pavlic, Theodore P and Ozguner, Umit and Fainekos, Georgios},
+  journal={CASE},
+  pages={523--530},
+  year={2016},
+  organization={IEEE},
+  keywords={conference},
+  note={talk},
+}
+
+@article{kim2015discof+,
+  title={DisCoF+: Asynchronous DisCoF with Flexible Decoupling for Cooperative Pathfinding in Distributed Systems},
+  author={Kim, Kangjin and Campbell, Joe and Duong, William and Zhang, Yu and Fainekos, Georgios},
+  journal={CASE},
+  pages={369--376},
+  year={2015},
+  organization={IEEE},
+  keywords={conference},
+}
+
+
+%%%%%%%%%%%%%%%%%%%% Journal
+
+@article{gurung2026hyperadapt,
+  title={HyperAdapt: Simple High-Rank Adaptation},
+  author={Gurung, Abel and Campbell, Joseph},
+  journal={TMLR},
+  arxiv={2509.18629},
+  tags={Language Models},
+  year={2026},
+  keywords={journal},
+}
+
+@article{zabounidis2025disentangled,
+  title={Disentangled Concept-Residual Models: Bridging the Interpretability-Performance Gap for Incomplete Concept Sets},
+  author={Zabounidis, Renos and Oguntola, Ini and Zhao, Konghao and Campbell, Joseph and Kim, Woojun and Stepputtis, Simon and Sycara, Katia},
+  journal={TMLR},
+  year={2026},
+  tags={Interpretability, Computer Vision},
+  pdf={/assets/pdf/26zabounidis_cbm.pdf},
+  organization={},
+  keywords={journal},
+}
+
+@article{bhagat2024let,
+  title={Let Me Help You! Neuro-Symbolic Short-Context Action Anticipation},
+  author={Bhagat, Sarthak and Li, Samuel and Campbell, Joseph and Xie, Yaqi and Sycara, Katia and Stepputtis, Simon},
+  journal={RA-L},
+  year={2024},
+  pdf={/assets/pdf/24bhagat_lmhy.pdf},
+  tags={Theory of Mind, Computer Vision, Robotics},
+  organization={IEEE},
+  keywords={journal},
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% Preprint/under review
+
+@article{chen2026mapl,
+  title={MAPL: Multi-Objective Preference Learning for Robot Locomotion},
+  author={Chen, Xiyue and Lin, Muhan and Shi, Shuyang and Campbell, Joseph},
+  journal={Preprint},
+  pdf={/assets/pdf/26chen_mapl.pdf},
+  tags={Reinforcement Learning, Language Models},
+  year={2026},
+  keywords={preprint},
+}
+
+@article{karmacharya2026interpretable,
+  title={Sparse Autoencoders for Interpretable Out-of-Distribution Detection},
+  author={Karmacharya, Ayush and Luschwitz, Luke and Romero, Lucia and Niu, Yanan and Campbell, Joseph},
+  journal={Preprint},
+  year={2026},
+  pdf={/assets/pdf/26karmacharya_said.pdf},
+  tags={Interpretability},
+  keywords={preprint},
+}
+
+@article{deng2025energyfull,
+  title={Energy-Based Transfer for Reinforcement Learning},
+  author={Deng, Zeyun and Ghosh, Jasorsi and Xie, Fiona and Lu, Yuzhe and Sycara, Katia and Campbell, Joseph},
+  journal={Preprint},
+  year={2026},
+  arxiv={2506.16590},
+  pdf={/assets/pdf/26deng_ebtl.pdf},
+  tags={Reinforcement Learning},
+  keywords={preprint},
+}
+
+@article{gurung2025biphase,
+  title={Bi-Phase Training: Learning Efficiently in High Dimensions},
+  author={Gurung, Abel and Campbell, Joseph},
+  journal={Preprint},
+  year={2026},
+  pdf={/assets/pdf/26gurung_bpt.pdf},
+  tags={Language Models},
+  keywords={preprint},
+}
+
+@article{lin2025speaking,
+  title={Speaking the Language of Teamwork: LLM-Guided Credit Assignment in Multi-Agent Reinforcement Learning},
+  author={Lin, Muhan and Shi, Shuyang and Guo, Yue and Chalaki, Behdad and Tadiparthi, Vaishnav and Pari, Ehsan Moradi and Stepputtis, Simon and Campbell, Joseph and Sycara, Katia},
+  journal={Preprint},
+  year={2025},
+  arxiv={2502.03723},
+  tags={Reinforcement Learning, Language Models},
+  keywords={preprint}
+}

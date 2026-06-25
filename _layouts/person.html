@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<section class="section profile">
+  <a class="back-link" href="{{ '/people/' | relative_url }}"><i class="ti ti-arrow-left"></i> All people</a>
+
+  <div class="profile-grid">
+    <aside class="profile-side">
+      {% assign parts = page.name | split: ' ' %}
+      <div class="profile-photo">
+        {% if page.photo %}<img src="{{ page.photo | relative_url }}" alt="{{ page.name }}">{% else %}<span class="photo-initials">{{ parts[0] | slice: 0 }}{{ parts.last | slice: 0 }}</span>{% endif %}
+      </div>
+      <p class="person-name">{{ page.name }}</p>
+      <p class="person-role coral-text">{{ page.role }}</p>
+      <div class="contacts">
+        {% if page.email %}<a href="mailto:{{ page.email }}"><i class="ti ti-mail"></i>{{ page.email }}</a>{% endif %}
+        {% if page.scholar %}<a href="{{ page.scholar }}"><i class="ti ti-school"></i>Google Scholar</a>{% endif %}
+        {% if page.github %}<a href="https://github.com/{{ page.github }}"><i class="ti ti-brand-github"></i>{{ page.github }}</a>{% endif %}
+        {% if page.website %}<a href="{{ page.website }}"><i class="ti ti-world"></i>Website</a>{% endif %}
+        {% if page.office %}<span><i class="ti ti-building"></i>{{ page.office }}</span>{% endif %}
+      </div>
+    </aside>
+
+    <div class="profile-main">
+      <h2 class="profile-h">About</h2>
+      <div class="profile-bio">{{ content }}</div>
+
+      {% if page.interests %}
+      <h2 class="profile-h">Research interests</h2>
+      <div class="tag-row">
+        {% for t in page.interests %}<span class="tag">{{ t }}</span>{% endfor %}
+      </div>
+      {% endif %}
+
+      {% if page.selected %}
+      <h2 class="profile-h">Selected publications</h2>
+      <div class="pub-list">
+        {% for pub in page.selected %}
+        <div class="pub pub-accent">
+          <p class="pub-title">{{ pub.title }}</p>
+          <p class="pub-authors">{{ pub.authors }}</p>
+          <p class="pub-venue">{{ pub.venue }}</p>
+          <div class="pub-links">
+            {% if pub.pdf %}<a class="pub-link primary" href="{{ pub.pdf }}"><i class="ti ti-file-type-pdf"></i> PDF</a>{% endif %}
+            {% if pub.code %}<a class="pub-link" href="{{ pub.code }}"><i class="ti ti-code"></i> Code</a>{% endif %}
+            {% if pub.arxiv %}<a class="pub-link" href="{{ pub.arxiv }}">arXiv</a>{% endif %}
+            {% if pub.website %}<a class="pub-link" href="{{ pub.website }}"><i class="ti ti-world"></i> Website</a>{% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

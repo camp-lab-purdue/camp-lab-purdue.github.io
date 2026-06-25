@@ -1,0 +1,73 @@
+# ─────────────────────────────────────────────────────────────
+# Site settings  —  edit these to change site-wide values
+# ─────────────────────────────────────────────────────────────
+title: CAMP Lab
+short_name: CAMP Lab
+tagline: Collaborative AI for Machines & People
+description: >-
+  The Collaborative AI for Machines and People (CAMP) Lab at Purdue University
+  studies AI, machine learning, and robotics.
+institution: Purdue University
+department: Department of Computer Science
+location: West Lafayette, IN
+
+# The base URL and domain. Org root site at https://camp-lab-purdue.github.io/
+# → baseurl stays empty. (For a project site at /<repo>, set baseurl to "/<repo>".)
+url: "https://camp-lab-purdue.github.io"
+baseurl: ""
+
+# Contact / social links (leave blank to hide the icon)
+email: joecamp@purdue.edu
+github: ""           # e.g. camp-lab
+scholar_url: https://scholar.google.com/citations?user=1NmM6OUAAAAJ
+twitter: ""          # e.g. camplab
+
+# ─────────────────────────────────────────────────────────────
+# Build settings
+# ─────────────────────────────────────────────────────────────
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+include:
+  - _pages
+timezone: America/Indiana/Indianapolis
+
+plugins:
+  - jekyll-scholar
+
+collections:
+  people:
+    output: true
+  news:
+    output: false
+
+defaults:
+  - scope: { path: "", type: "people" }
+    values: { layout: "person" }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - docker-compose.yml
+  - members.txt
+  - draft_logo.png
+  - papers.bib          # the master list lives at the repo root; the site reads _bibliography/papers.bib
+  - vendor
+
+# ─────────────────────────────────────────────────────────────
+# jekyll-scholar  —  drives the Publications page from BibTeX
+# ─────────────────────────────────────────────────────────────
+scholar:
+  source: ./_bibliography
+  bibliography: papers.bib
+  bibliography_template: bib       # uses _layouts/bib.html to render each entry
+  style: apa
+  locale: en
+  sort_by: year
+  order: descending
+  # Author(s) to highlight (bolded) wherever they appear:
+  last_name: [Campbell]
+  first_name: [Joseph]
