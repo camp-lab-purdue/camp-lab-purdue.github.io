@@ -14,11 +14,13 @@ description: Information for prospective students interested in joining the CAMP
     We welcome applicants at all levels — prospective PhD students and postdocs, as well as Purdue undergraduate and master's students
     looking for research experience.</p>
 
+    <p><i>If you are a BS/MS student, you must already be enrolled at Purdue.</i></p>
+
     <h2>What we look for</h2>
     <ul>
       <li>A strong foundation in machine learning, programming, statistics, and/or robotics.</li>
       <li>An interest in reinforcement learning, lifelong learning, explainability/interpretability, theory of mind, or robotics.<br/><i>Prior experience is strongly recommended, particularly for PhD and postdoc.</i></li>
-      <li>Self-motivated students who make steady progress on their own and take ownership of shaping their problem and direction.</li>
+      <li>Self-motivated students who are comfortable taking ownership and shaping their problem and direction.</li>
     </ul>
 
     <h2>How to reach out</h2>

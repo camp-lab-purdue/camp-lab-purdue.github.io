@@ -97,7 +97,7 @@
   function loop(now) {
     if (inTent) { if (autoDock && now > tentExitAt) exitTent(null); requestAnimationFrame(loop); return; }
     var dx = twx - wx, ddv = (tdd - dd) * 600, mag = Math.hypot(dx, ddv), moving = mag > 3;
-    if (moving) { var k = 5.0 / mag; wx += dx * k; dd += (tdd - dd) * k; phase += 0.28; if (Math.abs(dx) > 0.4) dir = dx > 0 ? 1 : -1; }
+    if (moving) { var k = 2.1 / mag; wx += dx * k; dd += (tdd - dd) * k; phase += 0.28; if (Math.abs(dx) > 0.4) dir = dx > 0 ? 1 : -1; }
     else {
       phase *= 0.86;
       if (goingToTent) { enterTent(); requestAnimationFrame(loop); return; }
