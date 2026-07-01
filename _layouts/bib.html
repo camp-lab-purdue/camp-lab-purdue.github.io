@@ -4,13 +4,15 @@
     {%- for a in entry.author_array -%}
       {%- capture nm %}{{ a.first | slice: 0 }}. {{ a.last }}{% endcapture -%}
       {%- assign nm = nm | strip -%}
+      {%- comment -%} strip a trailing equal-contribution asterisk for profile matching only (it still shows in nm) {%- endcomment -%}
+      {%- assign alast = a.last | remove: '*' -%}
       {%- assign linked = false -%}
       {%- for person in site.people -%}
         {%- assign pn = person.name | split: ' ' -%}
         {%- assign plast = pn | last -%}
         {%- assign pfirst = pn | first | slice: 0 -%}
         {%- assign afirst = a.first | slice: 0 -%}
-        {%- if plast == a.last and pfirst == afirst and linked == false -%}
+        {%- if plast == alast and pfirst == afirst and linked == false -%}
           <a class="pub-author-link" href="{{ person.url | relative_url }}">{{ nm }}</a>
           {%- assign linked = true -%}
         {%- endif -%}
@@ -28,6 +30,7 @@
   {%- endif -%}
   <div class="pub-links">
     {% if entry.pdf %}<a class="pub-link primary" href="{{ entry.pdf }}"><i class="ti ti-file-type-pdf"></i> PDF</a>{% endif %}
+    {% if entry.poster %}<a class="pub-link" href="{{ entry.poster }}"><i class="ti ti-presentation"></i> Poster</a>{% endif %}
     {% if entry.code %}<a class="pub-link" href="{{ entry.code }}"><i class="ti ti-code"></i> Code</a>{% endif %}
     {% if entry.arxiv %}<a class="pub-link" href="https://arxiv.org/abs/{{ entry.arxiv }}">arXiv</a>{% endif %}
     {% if entry.website %}<a class="pub-link" href="{{ entry.website }}"><i class="ti ti-world"></i> Website</a>{% endif %}

@@ -2,17 +2,18 @@
 % Link buttons on the Publications page come from these OPTIONAL fields on
 % any entry (add the ones you have; omit the rest):
 %   pdf    = {https://...}             -> "PDF" button  (or a local path like {/assets/pdf/foo.pdf})
+%   poster = {/assets/pdf/foo_poster.pdf} -> "Poster" button (local path or https URL)
 %   code   = {https://github.com/...}  -> "Code" button
 %   arxiv  = {2506.01234}              -> "arXiv" button (just the id; the link is built for you)
 %   website= {https://...}             -> "Website" button (project page)
 %   html   = {https://...}             -> "Link" button (DOI, publisher, etc.)
-% For a local PDF, drop the file in assets/pdf/ and set pdf={/assets/pdf/name.pdf}.
+% For a local PDF or poster, drop the file in assets/pdf/ and point the field at {/assets/pdf/name.pdf}.
 %
 % Research-area tags (also OPTIONAL) become colored labels and feed the topic
 % filter at the top of the Publications page. Comma-separated, one paper can
 % have several:   tags={Reinforcement Learning, Robotics}
 % Known tag colors: Reinforcement Learning, Robotics, Language Models,
-% Interpretability, Theory of Mind, Multi-Agent, Human-Robot Interaction
+% Interpretability, Theory of Mind, Computer Vision
 % (any other tag still works; it just gets a neutral gray label).
 %
 % Several entries below show examples; replace the placeholder pdf/arxiv/code
@@ -45,12 +46,14 @@
 
 @article{rahimirad2026bayesian,
   title={Bayesian Social Deduction with Graph-Informed Language Models},
-  author={Rahimirad, Shahab and Gergerli, Guven and Romero, Lucy and Qian, Angela and Olson, Matthew Lyle and Stepputtis, Simon and Campbell, Joseph},
+  author={Rahimirad*, Shahab and Gergerli*, Guven and Romero, Lucy and Qian, Angela and Olson, Matthew Lyle and Stepputtis, Simon and Campbell, Joseph},
   journal={ACL},
   year={2026},
   code={https://github.com/shahabrrad/Bayesian-Avalon},
   arxiv={2506.17788},
   website={https://camp-lab-purdue.github.io/bayesian-social-deduction/},
+  pdf={/assets/pdf/26rahimirad_grail.pdf},
+  poster={/assets/pdf/26rahimirad_grail_poster.pdf},
   tags={Theory of Mind, Language Models},
   keywords={conference},
 }

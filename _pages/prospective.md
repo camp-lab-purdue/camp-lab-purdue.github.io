@@ -24,7 +24,7 @@ description: Information for prospective students interested in joining the CAMP
     </ul>
 
     <h2>How to reach out</h2>
-    <p>If the lab's research resonates with you, please fill out the interest form below.<br/>I will contact you if there is a potential fit.</p>
+    <p>If the lab's research resonates with you, please fill out the interest form below.<br/>We will contact you if there is a potential fit.</p>
   </div>
 
   <!-- Express-interest call to action.
