@@ -1,6 +1,8 @@
 (function () {
   var svg = document.getElementById('hb');
   if (!svg) return;
+  var scene = document.getElementById('scene');
+  var SCENE_SY = 0.75; // scene group's vertical compression (must match hero.html transform)
   var NS = 'http://www.w3.org/2000/svg';
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -21,14 +23,14 @@
   [80, 160, 470, 548].forEach(function (bx) {
     var by = yAt(bx, 0.16), sc = 0.62;
     var g = document.createElementNS(NS, 'g');
-    g.setAttribute('transform', 'translate(' + bx + ' ' + by.toFixed(1) + ') scale(' + sc + ')');
+    g.setAttribute('transform', 'translate(' + bx + ' ' + by.toFixed(1) + ') scale(' + sc + ' ' + (sc / SCENE_SY).toFixed(3) + ')');
     g.innerHTML = '<path d="M0 -24 L9 -2 L-9 -2 Z" fill="#6E8C49"/><path d="M0 -31 L7 -12 L-7 -12 Z" fill="#6E8C49"/><rect x="-1.8" y="-2" width="3.6" height="5" fill="#6b4a2c"/>';
     trees.appendChild(g);
   });
 
   var tent = document.getElementById('tent'), tentDD = 0.58, tx = 505;
   var ty = yAt(tx, tentDD), tentSc = scAt(tentDD) * 1.25;
-  tent.setAttribute('transform', 'translate(' + tx + ' ' + ty.toFixed(1) + ') scale(' + tentSc.toFixed(2) + ')');
+  tent.setAttribute('transform', 'translate(' + tx + ' ' + ty.toFixed(1) + ') scale(' + tentSc.toFixed(2) + ' ' + (tentSc / SCENE_SY).toFixed(2) + ')');
   tent.innerHTML =
     '<path d="M0 -30 L19 0 L-19 0 Z" fill="#F0997B" stroke="#993C1D" stroke-width="1.8"/>' +
     '<line x1="0" y1="-30" x2="0" y2="0" stroke="#993C1D" stroke-width="1.2"/>' +
@@ -49,7 +51,7 @@
 
   function placeRobot(wx, dd, dir, bob) {
     var sc = scAt(dd);
-    robot.setAttribute('transform', 'translate(' + wx.toFixed(1) + ' ' + (yAt(wx, dd) - bob).toFixed(1) + ') scale(' + (dir * sc).toFixed(3) + ' ' + sc.toFixed(3) + ')');
+    robot.setAttribute('transform', 'translate(' + wx.toFixed(1) + ' ' + (yAt(wx, dd) - bob).toFixed(1) + ') scale(' + (dir * sc).toFixed(3) + ' ' + (sc / SCENE_SY).toFixed(3) + ')');
   }
 
   if (reduce) { placeRobot(300, 0.85, 1, 0); return; }
@@ -61,7 +63,7 @@
     if (Math.random() < 0.4) { goingToTent = true; autoDock = true; twx = tx; tdd = tentDD; }
     else { wanderGround(); }
   }
-  function ptOf(e) { var p = svg.createSVGPoint(); p.x = e.clientX; p.y = e.clientY; var m = svg.getScreenCTM(); if (!m) return null; return p.matrixTransform(m.inverse()); }
+  function ptOf(e) { var p = svg.createSVGPoint(); p.x = e.clientX; p.y = e.clientY; var m = svg.getScreenCTM(); if (!m) return null; p = p.matrixTransform(m.inverse()); p.y = p.y / SCENE_SY; return p; }
 
   function enterTent() {
     inTent = true; goingToTent = false;
@@ -108,7 +110,7 @@
     legR.setAttribute('transform', 'rotate(' + (-sw) + ' 3.2 -16)');
     placeRobot(wx, dd, dir, bob);
     var want = dd >= tentDD;
-    if (want !== inFront) { inFront = want; if (want) svg.appendChild(robot); else svg.insertBefore(robot, tent); }
+    if (want !== inFront) { inFront = want; if (want) scene.appendChild(robot); else scene.insertBefore(robot, tent); }
     requestAnimationFrame(loop);
   }
   requestAnimationFrame(loop);

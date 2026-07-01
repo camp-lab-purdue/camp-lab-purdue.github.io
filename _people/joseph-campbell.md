@@ -4,7 +4,7 @@ type: faculty
 role: Assistant Professor</br>Lab Director
 order: 1
 permalink: /people/joseph-campbell/
-photo: # /assets/img/people/joseph-campbell.jpg
+photo: /assets/img/people/joseph-campbell.png
 email: joecamp@purdue.edu
 scholar: https://scholar.google.com/citations?user=1NmM6OUAAAAJ
 github: joe-campbell
@@ -25,8 +25,8 @@ selected:
     code: "https://github.com/shahabrrad/Bayesian-Avalon"
     website: "https://camp-lab-purdue.github.io/bayesian-social-deduction/"
   - title: "Energy-Based Transfer for Reinforcement Learning"
-    authors: "Z. Deng, J. Ghosh, F. Xie, Y. Lu, K. Sycara, J. Campbell"
-    venue: "arXiv 2026"
+    authors: "Z. Deng, J. Ghosh, F. Xie, K. Cheng, Y. Lu, K. Sycara, J. Campbell"
+    venue: "CoLLAs 2026"
     arxiv: "https://arxiv.org/abs/2506.16590"
   - title: "Model-Agnostic Policy Explanations with Large Language Models"
     authors: "X. Zhang, Y. Guo, S. Chen, S. Stepputtis, M. Gombolay, K. Sycara, J. Campbell"

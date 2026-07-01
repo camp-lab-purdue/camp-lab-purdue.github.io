@@ -16,11 +16,15 @@ location: West Lafayette, IN
 url: "https://camp-lab-purdue.github.io"
 baseurl: ""
 
+# Google Analytics 4 Measurement ID (e.g. G-XXXXXXXXXX). Leave "" to disable.
+# Only loads on the live production build, never during local `jekyll serve`.
+google_analytics: "G-V42X7FSPSC"
+
 # Contact / social links (leave blank to hide the icon)
 email: joecamp@purdue.edu
-github: ""           # e.g. camp-lab
+github: "camp-lab-purdue"           # e.g. camp-lab
 scholar_url: https://scholar.google.com/citations?user=1NmM6OUAAAAJ
-twitter: ""          # e.g. camplab
+twitter: "joecampb"          # e.g. camplab
 
 # ─────────────────────────────────────────────────────────────
 # Build settings
