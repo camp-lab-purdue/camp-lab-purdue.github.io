@@ -1,0 +1,13 @@
+# Photos for the carousel at the bottom of the People page ("Lab life").
+# Add web-friendly images (.jpg / .png / .webp) to assets/img/group/ and list them here.
+# Order here = order shown. Captions are optional.
+#
+# NOTE: browsers can't display HEIC (iPhone) photos — convert to .jpg first, e.g.
+#   sips -s format jpeg -s formatOptions 82 -Z 1600 IN.HEIC --out OUT.jpg
+# (-Z 1600 also shrinks huge photos to a web-friendly size.)
+- image: /assets/img/group/25-neurips.jpg
+  caption: NeurIPS 2025
+- image: /assets/img/group/25-halloween.jpg
+  caption: Halloween 2025
+- image: /assets/img/group/25-moon.jpg
+  caption: Feast of the Hunters' Moon 2025

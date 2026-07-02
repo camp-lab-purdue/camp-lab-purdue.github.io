@@ -31,3 +31,5 @@ description: The people of the CAMP Lab at Purdue University.
   {% include people_group.html people=bs heading="Undergraduate students" %}
   {% include people_group.html people=visiting heading="Visiting scholars" %}
 </section>
+
+{% include gallery.html %}

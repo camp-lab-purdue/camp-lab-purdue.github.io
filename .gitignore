@@ -8,3 +8,4 @@ vendor/
 # OS / editor / local tooling
 .DS_Store
 .claude/settings.local.json
+

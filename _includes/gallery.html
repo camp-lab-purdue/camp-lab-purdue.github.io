@@ -1,0 +1,28 @@
+{% if site.data.gallery and site.data.gallery.size > 0 %}
+<section class="section gallery">
+  <div class="section-head">
+    <h2 class="section-title">Lab life</h2>
+  </div>
+
+  <div class="carousel" id="gallery">
+    <div class="carousel-frame">
+      <button class="carousel-btn prev" type="button" aria-label="Previous photo"><i class="ti ti-chevron-left"></i></button>
+      <div class="carousel-track">
+        {% for item in site.data.gallery %}
+        <figure class="slide{% if forloop.first %} active{% endif %}" data-caption="{{ item.caption | escape }}">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.caption | default: 'CAMP Lab group photo' | escape }}"{% unless forloop.first %} loading="lazy"{% endunless %}>
+        </figure>
+        {% endfor %}
+      </div>
+      <button class="carousel-btn next" type="button" aria-label="Next photo"><i class="ti ti-chevron-right"></i></button>
+    </div>
+
+    {% if site.data.gallery[0].caption %}<p class="carousel-caption">{{ site.data.gallery[0].caption }}</p>{% else %}<p class="carousel-caption"></p>{% endif %}
+
+    <div class="carousel-dots">
+      {% for item in site.data.gallery %}<button class="dot{% if forloop.first %} active{% endif %}" type="button" aria-label="Go to photo {{ forloop.index }}"></button>{% endfor %}
+    </div>
+  </div>
+</section>
+<script src="{{ '/assets/js/gallery.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+{% endif %}
