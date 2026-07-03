@@ -5,7 +5,7 @@ role: PhD Student
 started: 2025
 order: 5
 permalink: /people/muhan-lin/
-photo: # /assets/img/people/muhan-lin.jpg
+photo: /assets/img/people/muhan-lin.jpg
 email: #
 scholar: #
 github: #

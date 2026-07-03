@@ -5,7 +5,7 @@ role: PhD Student
 started: 2025
 order: 4
 permalink: /people/fiona-xie/
-photo: # /assets/img/people/fiona-xie.jpg
+photo: /assets/img/people/fiona-xie.jpg
 email: #
 scholar: #
 github: #
