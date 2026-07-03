@@ -11,9 +11,9 @@ institution: Purdue University
 department: Department of Computer Science
 location: West Lafayette, IN
 
-# The base URL and domain. Org root site at https://camp-lab-purdue.github.io/
-# → baseurl stays empty. (For a project site at /<repo>, set baseurl to "/<repo>".)
-url: "https://camp-lab-purdue.github.io"
+# Custom domain (camplab.ai) served via GitHub Pages. The CNAME file at the
+# repo root holds the domain; baseurl stays empty for a root domain.
+url: "https://camplab.ai"
 baseurl: ""
 
 # Google Analytics 4 Measurement ID (e.g. G-XXXXXXXXXX). Leave "" to disable.
