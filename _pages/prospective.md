@@ -24,18 +24,17 @@ description: Information for prospective students interested in joining the CAMP
     </ul>
 
     <h2>How to reach out</h2>
-    <p>If the lab's research resonates with you, please fill out the interest form below.<br/>We will contact you if there is a potential fit.</p>
   </div>
 
   <!-- Express-interest call to action.
        TO ENABLE THE BUTTON: paste your Google Form link between the quotes below.
        While it's left empty (""), a disabled "coming soon" placeholder shows instead. -->
-  {% assign form_url = "" %}
+  {% assign form_url = "https://docs.google.com/forms/d/e/1FAIpQLSdXu-nzDhpB4aNbJORRs7xxoYZAbTCfYCOUcqIgeaNqpM0tGw/viewform" %}
   <div class="cta-card">
     <div>
-      <p class="cta-title">Express your interest</p>
+      <p class="cta-title">Prospective students</p>
       {% if form_url != "" %}
-      <p class="cta-sub">A short form about your background and what you'd like to work on.</p>
+      <p class="cta-sub">PhD, master's, and undergraduate applicants should fill out the following interest form. We'll reach out if there's a potential fit.</p>
       {% else %}
       <p class="cta-sub">An interest form is coming soon. In the meantime, feel free to reach out by email.</p>
       {% endif %}
@@ -45,6 +44,10 @@ description: Information for prospective students interested in joining the CAMP
     {% else %}
     <span class="btn btn-disabled" aria-disabled="true">Form coming soon</span>
     {% endif %}
+  </div>
+
+  <div class="prose" style="margin-top: 20px;">
+    <p><strong>Prospective postdocs:</strong> Email <a href="mailto:{{ site.email }}?subject=%5BProspective%20postdoc%5D">{{ site.email }}</a> with your CV and interests, and include <strong>[Postdoc Application]</strong> in the subject. Candidates are encouraged to apply to external fellowships, such as the <a href="https://ipai.research.purdue.edu/postdoctoral-fellows-program/">IPAI Postdoctoral Fellows Program</a>.</p>
   </div>
 
   <!-- Optional: embed the form inline instead of (or in addition to) the button above.
